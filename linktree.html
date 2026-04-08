@@ -36,7 +36,7 @@
                 class="profile" alt="logo">
             <p></p>
             <div style="width: 350px;">
-                <h4 class="title-text">Padang Merdeka Surabaya</h4>
+                <h4 class="title-text" id="intro">Padang Merdeka Surabaya</h4>
                 <p class="desc">Padang Merdeka Surabaya Jln. Raya Mulyosari No.366A Open 10am-9pm | Visit us!</p>
             </div>
             <div class="sosmed">
@@ -78,7 +78,12 @@
                         class="link-icon">
                     <span>ShopeeFood</span>
                 </a>
-
+                <button class="btn btn-info btn-block rounded-pill linkFont py-3" onclick="showme()">Show me</button>
+                <button class="btn btn-info btn-block rounded-pill linkFont py-3" onclick="changeText()">Change
+                    text</button>
+                <button id="tombol" class="btn btn-info btn-block rounded-pill linkFont py-3"
+                    onclick="changeStyle()">Show
+                    me</button>
             </div>
         </div>
         <div class="pb-4 mt-5">
@@ -90,11 +95,33 @@
         <div class="footer pb-5">
             <p>Cookie Preferences • Report • Privacy</p>
         </div>
-
-
     </div>
+    <script>
+        function showme() {
+            // alert("Halo Selamat Siang");
 
+            Swal.fire({
+                title: "Good job!",
+                text: "You clicked the button!",
+                icon: "success"
+            });
+            console.log("ini baris 1, sudah sampai disini");
+            a = 18 + 10;
+            console.log("Hasil Penjumlahan :" + a);
+        }
 
+        function changeText() {
+            const element = document.getElementById("intro")
+            element.innerHTML = "HIDUP JOKIWO";
+        }
+
+        function changeStyle() {
+            const element = document.getElementById("tombol");
+            element.style.color = "red";
+            element.style.background = "yellow";
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
